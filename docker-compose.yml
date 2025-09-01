@@ -1,1 +1,22 @@
-
+version: '3.8'
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: cakto
+      POSTGRES_USER: cakto
+      POSTGRES_PASSWORD: cakto
+    ports:
+      - '5432:5432'
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+  app:
+    build: .
+    depends_on:
+      - db
+      - rabbitmq
+    ports:
+      - '8000:8000'
