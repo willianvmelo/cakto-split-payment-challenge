@@ -38,6 +38,4 @@ A integração com o Django real do core de pagamentos seria feita posteriorment
 - Simulação de eventos assíncronos (fila)
 - Métricas básicas e alertas de monitoramento
 
-### Observações
-- O MVP prioriza **entrega rápida e confiável** dentro do prazo de 6 semanas.
-- Event sourcing completo ou microserviço separado podem ser implementados em fases futuras.
+
